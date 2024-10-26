@@ -1,0 +1,78 @@
+.container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+
+    .btn-container
+    {
+        display: flex;
+        gap: 10px;
+        
+        .toast-btn
+        {
+            outline: none;
+            border: none;
+            background-color: #3600d1;
+            color: white;
+            padding: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    }
+    .toast-container
+    {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        right: 0px;
+        top: 0px;
+        gap: 10px;
+
+        .toast
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            color: white;
+            border-radius: 4px;
+            width: 15rem;
+            animation: toastAnimation 1s ease;
+
+            p, span {
+                margin: 0;
+            }
+            span {
+                cursor: pointer;
+            }
+        }
+        .error
+        {
+            background-color: #e10f05;
+        }
+        .success
+        {
+            background-color: #15b814;
+        }
+        .info
+        {
+            background-color: #0f8bd7;
+        }
+        .warning
+        {
+            background-color: #eeb906;
+        }
+        @keyframes toastAnimation {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+    }
+}
